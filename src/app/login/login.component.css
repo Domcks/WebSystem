@@ -10,7 +10,7 @@ body {
   flex-direction: column;
   font-family: "Poppins", sans-serif;
   overflow: hidden;
-  height: 100vh;
+  height: 100vh;  
 }
 
 h1 {
@@ -164,7 +164,7 @@ input {
   overflow: hidden;
   width: 768px;
   max-width: 100%;
-  min-height: 500px;
+  min-height: 600px;  
 }
 
 .form-container {
