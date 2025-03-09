@@ -8,13 +8,13 @@ import { Producto } from '../inventory/producto';
 export class BackendApiService {
 private urlBase="http://localhost:6969/inventario-app/productos";
 
-private credentials = btoa('admin:admin123'); // Codifica las credenciales en Base64
-private httpHeaders = new HttpHeaders({
-  'Authorization': 'Basic ' + this.credentials // Cabecera de autenticación
-});
+//private credentials = btoa('admin:admin123'); // Codifica las credenciales en Base64
+//private httpHeaders = new HttpHeaders({
+//  'Authorization': 'Basic ' + this.credentials // Cabecera de autenticación
+//});
 
   constructor(private clienteHttp: HttpClient) { }
-  obtenerProductoLista(): Observable<Producto[]> {
+  /*obtenerProductoLista(): Observable<Producto[]> {
     return this.clienteHttp.get<Producto[]>(this.urlBase, { headers: this.httpHeaders });
   }
 
@@ -32,8 +32,8 @@ private httpHeaders = new HttpHeaders({
 
   eliminarProducto(id: number): Observable<Object> {
     return this.clienteHttp.delete(`${this.urlBase}/${id}`, { headers: this.httpHeaders });
-  }
-/*  
+  }*/  
+
   obtenerProductoLista(): Observable<Producto[]>{    
     return this.clienteHttp.get<Producto[]>(this.urlBase)
   }
@@ -49,6 +49,5 @@ private httpHeaders = new HttpHeaders({
 
   eliminarProducto(id: number): Observable<Object>{
     return this.clienteHttp.delete(`${this.urlBase}/${id}`);
-  }*/
-
+  }
 }
